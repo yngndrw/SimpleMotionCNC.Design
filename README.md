@@ -28,7 +28,7 @@ A full-featured strongly-typed asynchronous library written based around the ref
 A simple G-Code parsing library compatible with both [Mach3](http://machmotion.com/cnc-info/g-code.html) and [EMC](http://linuxcnc.org/docs/html/gcode.html) flavours. Would be split into two parts, a stateless parser and a stateful machine-agnostic controller.
 
 ## Stand-Alone CNC Controller
-A simple console application which links the Simple Motion and G-Code libraries. Responsible for executing a single G-Code file (From command-line arguments) against the local machine (Connected via RS485).
+A simple console application which links the Simple Motion and G-Code libraries. Responsible for executing a single G-Code file (From command-line arguments) against the local machine (Connected via RS485). The batched-command API would be used to prevent synchronisation issues and timing complexities.
 
 ## Client-Server Framework
 A web-socket-baseed framework which provides a secure (Intended to be publically accessible on the internet) multi-tenant service which orchestrates commands and responces between different clients. Clients may either be native applications or Javascript in-browser applications. No assumptions are to be made in the library regarding protocols or usage.
