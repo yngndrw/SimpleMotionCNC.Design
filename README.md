@@ -30,6 +30,7 @@ A simple G-Code parsing library compatible based on the [Mach4](http://machmotio
 A trajectory planner would need to be created which takes the high-level commands, applies the individual axis trajectory constraints (Acceleration, deceleration and maximum speed) and outputs the low-level movement commands which are to be replayed directly by the motor drivers. The trajectory planner would need to look ahead to the next command and calculate the maximum possible start and end speeds for that command (Based on the maximum speeds for each axis). Depending on the direction change between the two commands, the machine may not need to slow down to a complete stop before the next command and this can be decided at this point before the acceleration and deceleration are calculated.
 
 [Block Diagram](https://github.com/yngndrw/SimpleMotionCNC.Design/blob/master/CNC%20Controller%20-%20Block%20Diagram.png)
+
 [Trajectory Planning Flow Chart](https://github.com/yngndrw/SimpleMotionCNC.Design/blob/master/CNC%20Controller%20-%20Trajectory%20Planner%20Flow%20Chart.png)
 
 ## Stand-Alone CNC Controller
